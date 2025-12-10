@@ -65,5 +65,50 @@ print(multiply(2,3))
 # But now let's say you want to pass multiple numberss
 
 def multi(* numbers):
-    print(numbers)
-multi(2, 4, 6, 8, 10)
+    total = 1
+    for number in numbers:
+        total *= number
+    return total
+print(multi(2,3,4,5))
+# here the * before numbers allow us to pass multiple arguments and inside the function we can iterate over them like a list
+
+# XXARGS
+# We can use ** args to pass multiple key-value pairs
+def save_user(** user):
+    print(user)
+save_user(id=1, name="Mahlodi", age=24)
+# it will return a dictionary with key-value pairs
+
+# SCOPE
+'''Scope refers to a region of code where the variable is defined.
+There are two main types of scope in Python: global scope and local scope.'''
+
+# LOCAL SCOPE
+'''is a variable defined inside a fuction and can only be accessed inside that function'''
+def greet():
+    mssg = "Hello"
+    print(mssg)
+
+# greet()
+# print(mssg) # this will raise an error because message is not defined outside the function
+
+# GLOBAL SCOPE
+'''is a variable defined outside any function and can be accessed anywhere in the code'''
+
+greeting = "Hello everyone"
+
+def greeting_people():
+    print(greeting) # accessing global variable inside function
+
+greeting_people()
+print(greeting) # accessing global variable outside function
+
+
+# DEBUGGING
+# Debugging is the process of finding anfd fixing errors(bugs) in your code
+# When your program crashes , give wrong results, you need to debug to find whats wrong and how to fix it
+
+
+# def divide(a, b):
+#     return a / b
+# print(divide(4, 0))  # this will raise an error because we can't divide by zero
