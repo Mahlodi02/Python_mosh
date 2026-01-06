@@ -19,6 +19,7 @@ point.z = 10 # we can also define new attributes after creating an object. becau
 
 print(point.default_color) # accessing class attribute via instance
 print(Point.default_color) # accessing class attribute via class
+print(type(point)) # <class '__main__.Point'>
 
 point.draw() 
 
